@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_renting: 2018-03-24
+  end_renting: 2018-03-24
+  total: MyString
+  status: 1
+  user: one
+
+two:
+  start_renting: 2018-03-24
+  end_renting: 2018-03-24
+  total: MyString
+  status: 1
+  user: two
