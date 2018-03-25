@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  size: one
+  bill: one
+  renting_quantity: 1
+  renting_fee_product: MyString
+  name_product: MyString
+
+two:
+  product: two
+  size: two
+  bill: two
+  renting_quantity: 1
+  renting_fee_product: MyString
+  name_product: MyString
