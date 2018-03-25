@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20180325041628) do
     t.string "name_product"
     t.bigint "product_id"
     t.bigint "bill_id"
-    t.bigint "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bill_id"], name: "index_product_bills_on_bill_id"

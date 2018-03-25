@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :password
       t.string :email
       t.string :address
-      t.string :phone
+      t.string :phone_number
       t.string :personal_card
       t.integer :role
 
