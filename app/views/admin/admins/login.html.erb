@@ -12,14 +12,14 @@
     <div class="main-login main-center">
       <h1 align="center">INSAL</h1>
       <h4 align="center"> <%= t "admin.user_sign_in" %> </h4>
-      <form action="/login" method="post" class="form-login">
+      <%= form_tag '/admin/admins', :method => 'post', :class => 'form-login' do %>
         <!-- EMAIL  -->
         <div class="form-group">
           <label for="name" class="cols-sm-2 control-label"> <%= t "admin.email" %> </label>
           <div class="cols-sm-10">
             <div class="input-group">
               <span id="input-group" class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" name="email" id="email" placeholder="<%= t "admin.enter_email" %>"/>
+              <%= text_field_tag :email, params[:email],  type:"text", class:"form-control", id:"email"%>
             </div>
           </div>
         </div>
@@ -29,7 +29,8 @@
           <div class="cols-sm-10">
             <div class="input-group">
               <span id="input-group" class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-              <input type="password" class="form-control" name="password" id="password"  placeholder="<%= t "admin.enter_password" %>"/>
+              <%= password_field_tag :password, nil, type:"password", class:"form-control", id:"password"%>
+              <!-- <input type="password" class="form-control" name="password" id="password"  placeholder="<%= t "admin.enter_password" %>"/>    -->
             </div>
           </div>
         </div>
@@ -37,9 +38,10 @@
           <a style="color: #ffffff; font-size: 15px;" href="/signup"> <%= t "admin.new_account" %> </a>
         </div>
         <div class="form-group">
-          <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button"> <%= t "admin.sign_in" %> </button>
+          <%= submit_tag "Log In", type:"submit", id:"button", class:"btn btn-primary btn-lg btn-block login-button" %>
+           <!--<button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button"> <%= t "admin.sign_in" %> </button>    -->
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </body>
