@@ -1,0 +1,23 @@
+<p id="notice">
+    <%= notice %>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+		    <th>STT</th>
+			<th>Ngày thuê</th>
+			<th>Ngày trả</th>
+			<th>Tổng phí</th>
+			<th>Hiện trạng</th>	
+		</tr>
+	</thead>
+	<tbody>  
+		<tr class="success">
+		    <td><%= @bill.id %></td>
+		    <td><%= @bill.start_renting %></td>
+			<td><%= @bill.end_renting %></td>
+			<td><%= @bill.total %></td>
+			<td><%= @bill.status %></td>
+		</tr>
+	</tbody>
+</table>

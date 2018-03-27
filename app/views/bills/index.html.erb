@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>STT</th>	
+        <th>Ngày thuê</th>
+        <th>Ngày trả</th>
+        <th>Tổng phí</th>
+        <th>Hiện trạng</th>	
+      </tr>
+    </thead>
+    <%= link_to "new", new_bill_path %>
+    <tbody>
+      <% @bills.each do |bill| %>
+        <tr class="danger">
+            <td>
+                <%= bill.id %>
+            </td>
+            <td>
+                <%= bill.start_renting %>
+            </td>
+            <td>
+                <%= bill.end_renting %>            
+            </td>
+            <td>
+                <%= bill.total %>
+            </td>
+            <td>
+                <%= bill.status %>     
+            </td>      
+        </tr>      
+      <% end %>
+    </tbody>
+</table>
