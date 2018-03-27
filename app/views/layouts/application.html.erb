@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render  "layouts/header" %>
+    <div>
+      <div class="col-md-2 side-bar">
+        <%= render  "layouts/side-bar" %></div>
+      <div class="col-md-10">
+        <%= yield %> 
+      </div>
+    </div>
   </body>
 </html>

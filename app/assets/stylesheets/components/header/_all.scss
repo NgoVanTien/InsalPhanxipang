@@ -1,0 +1,53 @@
+@import 'logo';
+
+.main-header {
+    background: #3c8dbc;
+    max-height: 200px;
+    span.logo-lg {
+        font-size: 30px;
+        padding: 5px;
+    }
+    .navbar {
+        li {
+            a, p {
+                color: white;
+                font-size: 15px;
+                padding: 15px;
+                margin: 0px;
+                i {
+                    font-size: 20px;
+                }
+                &:hover {
+                    color: black;
+                }
+            }
+            ul {
+                li.user-header {
+                    p.user-header__title {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+.head-bar {
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0px;
+        padding: 10px;
+        li.head-bar__item {
+            a {
+                padding: 5px;
+                border-right: 2px solid #3c8dbc;
+                i {
+                    padding: 5px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
