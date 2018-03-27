@@ -195,7 +195,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.3.6)
+  bootstrap-sass (~> 3.3.7)
   bootstrap3-datetimepicker-rails (~> 4.17.42)
   byebug
   capybara (~> 2.13)
@@ -203,6 +203,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-datatables-rails (~> 3.4.0)
+  jquery-rails
   jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.3.18, < 0.5)
