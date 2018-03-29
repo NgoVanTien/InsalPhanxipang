@@ -1,0 +1,18 @@
+<%= form_for(@bill) do |f| %>
+    STT:
+       <%= f.text_field :user_id %>
+	   <Br>
+    Ngày thuê:
+       <%= f.text_field :start_renting %>
+	   <Br>
+	Ngày trả:
+       <%= f.text_field :end_renting %>
+	   <Br>
+    Tổng phí:
+	   <%= f.text_field :total %>
+	   <Br>
+	Hiện trạng:
+	   <%= f.text_field :status %>
+	   <Br>
+    <%= f.submit  "Submit" %>             
+<% end %>

@@ -1,0 +1,41 @@
+ <div class="box-body table-responsive no-padding table">
+    <table class="table table-hover">
+        <tr>
+            <th>STT</th>	
+            <th>Ngày thuê</th>
+            <th>Ngày trả</th>
+            <th>Tổng phí</th>
+            <th>Hiện trạng</th>
+        </tr>
+        <% @bills.each do |bill| %>
+        <tr class="info">
+            <td><%= bill.id %></td>
+            <td><%= bill.end_renting %></td>
+            <td><%= bill.start_renting %></td>
+            <td><%= bill.total %></td>
+            <td><span class="label label-success"><%= bill.status %></span></td>
+        </tr>
+        <tr class="danger">
+            <td><%= bill.id %></td>
+            <td><%= bill.end_renting %></td>
+            <td><%= bill.start_renting %></td>
+            <td><%= bill.total %></td>
+            <td><span class="label label-warning"><%= bill.status %></span></td>
+        </tr>
+        <tr class="active">
+            <td><%= bill.id %></td>
+            <td><%= bill.end_renting %></td>
+            <td><%= bill.start_renting %></td>
+            <td><%= bill.total %></td>
+            <td><span class="label label-primary"><%= bill.status %></span></td>
+        </tr>
+        <tr class="sucess">
+            <td><%= bill.id %></td>
+            <td><%= bill.end_renting %></td>
+            <td><%= bill.start_renting %></td>
+            <td><%= bill.total %></td>
+            <td><span class="label label-danger"><%= bill.status %></span></td>
+        </tr>
+        <% end %>
+    </table>
+</div>
