@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
+//= require bootstrap
 //= require jquery_ujs
-//= require jquery.validate
-//= require bootstrap-sprockets
 //= require rails-ujs
+//= require turbolinks
 //= require vendor/adminlte.min
+//= require.validate
 //= require views/loginView.js

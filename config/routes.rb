@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     root "admins#login"
     resources :admins
     resources :categories
+    get 'bills/index'
+    resources :bills
   end
-
 end
+
+

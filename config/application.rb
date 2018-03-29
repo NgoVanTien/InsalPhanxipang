@@ -17,3 +17,4 @@ module InsalPhanxipang
     config.i18n.default_locale = :vi
   end
 end
+
