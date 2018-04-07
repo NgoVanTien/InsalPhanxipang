@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem "jquery-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
@@ -40,6 +40,8 @@ gem "jquery-ui-rails"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "bootstrap3-datetimepicker-rails", '~> 4.17.42'
 gem "font-awesome-rails"
+gem "kaminari"
+gem "bootstrap4-kaminari-views"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,3 +62,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

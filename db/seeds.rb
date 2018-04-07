@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+data_category = ["Ao dai", "Vest", "Ao phong"]
+user = User.create(name: "Mai Thao", password: "0508", email: "thao@gmail.com",address: "Da Nang", phone: "090", personal_card: "chung minh", role: "admin")
+bill = Bill.create(start_renting: "27/09/2018", end_renting: "22/11/2018", total: "39.000", status:"hết hạn", user_id: user.id) 
+data_category.each do |item|
+    Category.create(name: item)
+end
+(1..20).to_a.each do |item|
+    Bill.create(start_renting: "27/09/2018", end_renting: "22/11/2018", total: "39.000", status:"hết hạn", user_id: 1)
+end
