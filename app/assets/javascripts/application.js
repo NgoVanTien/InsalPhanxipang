@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.validate
+//= require bootstrap-sprockets
 //= require rails-ujs
-//= require turbolinks
-
 //= require vendor/adminlte.min
+//= require views/loginView.js

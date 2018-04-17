@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#index'
+  root "static_pages#index"
 
   namespace :admin do
-    root "categories#index"
+    root "admins#login"
+    resources :admins
     resources :categories
   end
+
 end
