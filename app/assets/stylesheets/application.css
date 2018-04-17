@@ -12,6 +12,10 @@
  *
  *= require_self
  *= require font-awesome
+ /*
+ *= require daterangepicker-bs3
+ *
+ *= require bootstrap-datepicker3
  *= require main.css.scss
  */
 

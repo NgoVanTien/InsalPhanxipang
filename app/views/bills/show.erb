@@ -1,0 +1,103 @@
+<% provide(:title, "showBill") %>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+</head>
+<body>
+<div class="container">
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    view details bill
+  </button>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="view-bill modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <!-- Modal body -->
+        <div class="modal-body">
+          <i class="fa fa-edit"></i>  
+          <div class="box-body no-padding info-bill">
+            <div class="row row-info-first">
+              <div class="col-6">
+                <strong>Tên:</strong>
+                <%= Bill.first.user.name %>
+              </div>
+              <div class="col-6">
+                <strong>Ngày thuê:</strong>
+                <input type="text" id='datepicker' class='datepicker' placeholder='yyyy-mm-dd' value= <%= Bill.first.start_renting %> />
+                <script>
+                  $('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+                </script>
+              </div>
+              <div class="col-6">
+                <strong>Số điện thoại:</strong>
+              </div>
+              <div class="col-6">
+                <strong>Ngày hết hạn:</strong>
+                <input type="text" id='datepicker' class='datepicker--expiredate' placeholder='yyyy-mm-dd' value= <%= Bill.first.end_renting %> />
+                <script>
+                  $('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+                </script>
+              </div>
+              <div class="col-6">
+                <strong>Thẻ cá nhân:</strong>
+                <%= Bill.first.user.personal_card %>
+              </div>
+              <div class="col-6">
+                <strong>Ngày gia hạn:</strong>
+                <%# <%= Bill.first.start_renting %>
+              </div>
+            </div>
+              <table class="table table-bordered table-bill table-hover">
+                <tr>
+                  <th>ID</th>
+                  <th>Sản phẩm</th>
+                  <th>Sô lượng</th>
+                  <th>Giá</th>
+                  <th>Tổng tiền</th>
+                  <th>remove</th>
+                </tr>
+                  <tr>
+                    <td><%= Bill.first.user.id %></td>
+                    <td>Váy đuôi cá</td>
+                    <td>1</td>
+                    <td>500 000</td>
+                    <td>500 000</td>
+                    <td><a class="remove-bill">Remove</a></td>
+                  </tr>
+                  <tr>
+                    <td><%= Bill.first.user.id %></td>
+                    <td>Váy đuôi cá</td>
+                    <td>1</td>
+                    <td>500 000</td>
+                    <td>500 000</td>
+                    <td><a class="remove-bill">Remove</a></td>
+                  </tr>
+              </table>
+            </div>
+            <div class="row row-info-second">
+              <div class="col-2">
+                <strong>Tổng tiền:</strong><br>
+              </div>
+              <div class="col-2">
+                <strong>Gia hạn:</strong><br>
+              </div>
+              <div class="col-2">
+                <strong>Thành tiền:</strong>
+              </div>
+          </div>
+        </div>        
+        <!-- Modal footer -->
+        <div class="modal-footer footer-bill">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Pay</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>        
+      </div>
+    </div>
+  </div>  
+</div>
+</body>
+</html>
