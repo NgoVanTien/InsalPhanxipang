@@ -7,37 +7,38 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 </head>
-<body>
+<body class="login">
   <div class="container">
     <div class="main-login main-center">
       <h1 align="center">INSAL</h1>
-      <h4 align="center">User Sign In</h4>
+      <h4 align="center"> <%= t "admin.user_sign_in" %> </h4>
       <form action="/login" method="post" class="form-login">
         <!-- EMAIL  -->
         <div class="form-group">
-          <label for="name" class="cols-sm-2 control-label">Email</label>
+          <label for="name" class="cols-sm-2 control-label"> <%= t "admin.email" %> </label>
           <div class="cols-sm-10">
             <div class="input-group">
               <span id="input-group" class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email"/>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Nhập email của bạn"/>
             </div>
           </div>
         </div>
         <!-- PASSWORD  -->
         <div class="form-group">
-          <label for="email" class="cols-sm-2 control-label">Password</label>
+          <label for="email" class="cols-sm-2 control-label"> <%= t "admin.password" %> </label>
           <div class="cols-sm-10">
             <div class="input-group">
               <span id="input-group" class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-              <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your password"/>
+              <input type="password" class="form-control" name="password" id="password"  placeholder="Nhập mật khẩu của bạn"/>
+
             </div>
           </div>
         </div>
         <div class="row" align="center">
-          <a style="color: #ffffff; font-size: 15px;" href="/signup">Create new account</a>
+          <a style="color: #ffffff; font-size: 15px;" href="/signup"> <%= t "admin.new_account" %> </a>
         </div>
         <div class="form-group">
-          <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Sign in</button>
+          <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button"> <%= t "admin.sign_in" %> </button>
         </div>
       </form>
     </div>

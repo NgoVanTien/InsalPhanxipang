@@ -1,7 +1,7 @@
 $.validator.addMethod("mail", function(value, element) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;      
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return this.optional(element) || re.test(value);
-}, "Please enter a valid email address.");
+}, "Vui lòng nhập địa chỉ email hợp lệ.");
 $(".form-login").validate({
   rules: {
     "email": {
@@ -14,10 +14,10 @@ $(".form-login").validate({
   },
   messages: {
     email: {
-      required: "Username is required.",
+      required: "Email là bắt buộc.",
     },
     password: {
-      required: "Password is required."
+      required: "Mật khẩu là bắt buộc."
     }
   }
 });

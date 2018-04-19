@@ -1,0 +1,7 @@
+vi:
+  admin:
+    user_sign_in: "Người dùng đăng nhập"
+    email: "Email"
+    password: "Mật khẩu"
+    new_account: "Tạo tài khoản mới"
+    sign_in: "Đăng nhập"
