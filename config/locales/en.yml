@@ -1,4 +1,5 @@
 en:
+
   admin:
     user_sign_in: "User Sign In"
     email: "Email"
@@ -7,3 +8,5 @@ en:
     sign_in: "Sign in"
     enter_email: "Enter your email"
     enter_password: "Enter your password"
+
+
