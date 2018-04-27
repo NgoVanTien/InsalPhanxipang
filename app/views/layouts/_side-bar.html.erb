@@ -3,34 +3,31 @@
   <section class="sidebar">
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MAIN NAVIGATION</li>
-      <li class="active treeview">
-        <a href="#">
-          <i class="fa fa-dashboard"></i> <span>Categories</span>
+      <li class="active">
+        <%= link_to admin_categories_path do %>
+          <i class="fa fa-dashboard"></i> <span><%= t "layouts.categories" %></span>
           <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
           </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class=""><a href="index.html"><i class="fa fa-circle-o"></i> Dress</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Suit</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i> Trousers</a></li>
-        </ul>
+        <% end %>
       </li>
-      <li class="treeview">
-        <a href="#">
+      <li>
+        <%= link_to admin_bills_path do %>
           <i class="fa fa-files-o"></i>
-          <span>Bills</span>
+          <span><%= t "layouts.bills" %></span>
           <span class="pull-right-container">
             <span class="label label-primary pull-right">4</span>
           </span>
-        </a>
+        <% end %>
       </li>
-      <li class="header">INSIGHTS</li>
-      <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Products</span></a></li>
-      <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Bills</span></a></li>
-      <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Finance</span></a></li>
+      <li class="header"><%= t "layouts.insights" %></li>
+      <li>
+        <%= link_to admin_products_path do %>
+           <i class="fa fa-circle-o text-red"></i>
+          <span><%= t "layouts.products" %></span>
+        <% end %>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->
 </aside>
+

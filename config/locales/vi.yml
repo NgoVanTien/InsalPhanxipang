@@ -14,7 +14,6 @@ vi:
       price: "giá"
       renting_fee: "phí thuê"
       image_url: "link ảnh"
-  hello: "Hello world"
   views:
     pagination:
       first: "« Trang Đầu"
