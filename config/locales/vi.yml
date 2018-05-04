@@ -14,6 +14,14 @@ vi:
       price: "giá"
       renting_fee: "phí thuê"
       image_url: "link ảnh"
+  layouts:
+    categories: "Danh Mục"
+    bills: "Hóa Đơn"
+    insights: "Thống kê chi tiết"
+    products: "Sản phẩm"
+    action: "Tìm kiếm"
+    sign_up: "Đăng ký"
+    log_in: "Đăng nhập"
   views:
     pagination:
       first: "« Trang Đầu"
