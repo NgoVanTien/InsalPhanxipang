@@ -3,28 +3,27 @@
   <section class="sidebar">
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MAIN NAVIGATION</li>
       <li class="active">
         <%= link_to admin_categories_path do %>
-          <i class="fa fa-dashboard"></i> <span>Categories</span>
-          <span class="pull-right-container"> 
+          <i class="fa fa-dashboard"></i> <span><%= t "layouts.categories" %></span>
+          <span class="pull-right-container">
           </span>
         <% end %>
       </li>
       <li>
         <%= link_to admin_bills_path do %>
           <i class="fa fa-files-o"></i>
-          <span>Bills</span>
+          <span><%= t "layouts.bills" %></span>
           <span class="pull-right-container">
             <span class="label label-primary pull-right">4</span>
           </span>
         <% end %>
       </li>
-      <li class="header">INSIGHTS</li>
+      <li class="header"><%= t "layouts.insights" %></li>
       <li>
         <%= link_to admin_products_path do %>
-           <i class="fa fa-circle-o text-red"></i> 
-          <span>Products</span>
+           <i class="fa fa-circle-o text-red"></i>
+          <span><%= t "layouts.products" %></span>
         <% end %>
       </li>
     </ul>

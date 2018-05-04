@@ -14,6 +14,14 @@ en:
       price: "price"
       renting_fee: "renting fee"
       image_url: "image url"
+  layouts:
+    categories: "Categorisdgdfgdfes"
+    bills: "Bills"
+    insights: "Insights"
+    products: "Products"
+    action: "Action"
+    sign_up: "Sign up"
+    log_in: "Log in"
   views:
     pagination:
       first: "« FIRST"
