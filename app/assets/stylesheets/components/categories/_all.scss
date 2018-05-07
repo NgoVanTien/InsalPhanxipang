@@ -1,1 +1,40 @@
+<<<<<<< 658503497a3618e689f24305b0ef83a1b0890f91
 @import "view_categories";
+=======
+.box-body {
+  position: relative;
+  .item-option {
+    .item-option__button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    a:hover .item-option__list {
+      display: block;
+    }
+    .item-option__list {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 25px;
+      ul {
+        background: #f3f3f3;
+        width: 100px;
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+        li {
+          width: auto;
+          height: 40px;
+          line-height: 40px;
+          border-bottom: 1px solid #e8e8e8;
+          padding: 0 1em;
+          .btn {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+>>>>>>> show list category at beginning
