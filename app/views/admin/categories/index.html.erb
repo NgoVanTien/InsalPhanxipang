@@ -1,1 +1,121 @@
-<h1>Index Categories</h1>
+<div class="row docs-premium-template">
+  <% @categories.each do |c| %>
+    <div class="col-sm-12 col-md-4">
+      <div class="box box-solid">
+        <div class="box-body" style= "height: 300px;">
+          <div class = "item-option">
+            <a class = "item-option__button"><i class="fa fa-chevron-down"></i></a>
+            <div class = "item-option__list">
+              <ul class = "item-option__list-menu">
+                <li>
+                  <div class="container">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Xóa</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Xác nhận</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Bạn có muốn xóa không?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <%= link_to admin_category_path(c),method: :delete,
+                            data: {} do %>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+                            <% end %>
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Sửa</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Xác nhận</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Bạn có muốn xóa không?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            </div>
+          <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+            <%= c.name %>
+          </h4>
+          <div class="media">
+            <div class="media-left">
+              <a href="#" class="ad-click-event">
+                <img src="https://taha.vn/images/thumbnails/380/475/detailed/11/Hollister-xanh-reu.jpg?t=1522224244" alt="Material Dashboard Pro" class="media-object" style="width: 150px;height: auto;border-radius: 4px;box-shadow: 0 1px 3px rgba(0,0,0,.15);">
+              </a>
+            </div>
+            <div class="media-body">
+              <div class="clearfix">
+                <h4 style="margin-top: 0"><%= c.category_description %></h4>
+                <p class="pull-right">
+                  <a href="#" class="btn btn-success btn-sm ad-click-event">
+                    LEARN MORE
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+    <div class="col-sm-12 col-md-4">
+      <div class="container">
+        <h2>Basic Modal Example</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+          <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
