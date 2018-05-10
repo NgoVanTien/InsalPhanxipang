@@ -2,23 +2,11 @@
   <% @categories.each do |c| %>
     <div class="col-sm-12 col-md-4">
       <div class="box box-solid">
-<<<<<<< 790ca28684eaf1726a0da67e1e44a9cef2122e95
-<<<<<<< fb310dc95b3a496ac1382eaa47883751440126d1
         <div class="box-body" style= "height: 450px;">
-          <div class = "btn-group categories-controller">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editCategory"><i class="fa fa-edit"></i></button>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteCategory"><i class="fa fa-trash"></i></button>
-            <div class="modal fade" id="myModal" role="dialog">
-=======
-        <div class="box-body" style= "height: 300px;">
-=======
-        <div class="box-body" style= "height: 450px;">
->>>>>>> view categories
           <div class = "btn-group categories-controller">
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editCategory"><i class="fa fa-edit"></i></button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteCategory"><i class="fa fa-trash"></i></button>
             <div class="modal fade" id="deleteCategory" role="dialog">
->>>>>>> temp
               <div class="modal-dialog">
               <!-- Modal content-->
                 <div class="modal-content">
@@ -39,41 +27,13 @@
                 </div>
               </div>
             </div>
-<<<<<<< 790ca28684eaf1726a0da67e1e44a9cef2122e95
-<<<<<<< fb310dc95b3a496ac1382eaa47883751440126d1
           </div>
-=======
-            <%= render  "admin/categories/form" %>
-          </div>
-          <h4 style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
-            <%= c.name %>
-          </h4>
->>>>>>> temp
-=======
-          </div>
->>>>>>> view categories
           <div class="media">
             <div class="media-left">
               <a href="#" class="ad-click-event">
                 <img src="https://taha.vn/images/thumbnails/380/475/detailed/11/Hollister-xanh-reu.jpg?t=1522224244" alt="Material Dashboard Pro" class="media-object">
               </a>
             </div>
-<<<<<<< 790ca28684eaf1726a0da67e1e44a9cef2122e95
-<<<<<<< fb310dc95b3a496ac1382eaa47883751440126d1
-=======
-            <div class="media-body">
-              <div class="clearfix">
-
-                <p class="pull-right">
-                  <a href="#" class="btn btn-success btn-sm ad-click-event">
-                    LEARN MORE
-                  </a>
-                </p>
-              </div>
-            </div>
->>>>>>> temp
-=======
->>>>>>> view categories
           </div>
           <h4 class = "category-title">
             <%= c.name %>
@@ -82,46 +42,10 @@
       </div>
     </div>
   <% end %>
-<<<<<<< 790ca28684eaf1726a0da67e1e44a9cef2122e95
-<<<<<<< fb310dc95b3a496ac1382eaa47883751440126d1
-    <div class="col-sm-12 col-md-4 add-category__btn" style= "height: 450px;">
-      <div class="container">
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i></button>
-=======
-    <div class="col-sm-12 col-md-4">
-      <div class="box box-solid">
-        <div class="box-body" style= "height: 300px;">
-          <div class="container">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i></button>
-            <div class="modal fade" id="myModal" role="dialog">
-              <div class="modal-dialog">
-
-              <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
->>>>>>> temp
-=======
     <div class="col-sm-12 col-md-4 add-category__btn" style= "height: 450px;">
       <div class="container">
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> </button>
->>>>>>> view categories
       </div>
     </div>
->>>>>>> view categories
 </div>
