@@ -1,0 +1,35 @@
+.box-body {
+  position: relative;
+  .categories-controller {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+.media {
+  .media-object {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  }
+}
+.category-title {
+  background-color:none;
+  font-size: 20px;
+  text-align: center;
+  padding: 7px 10px;
+  margin-top: 10px;
+}
+.add-category__btn {
+  .container {
+
+    .btn {
+      background: none;
+      color: black;
+      border-color: black;
+      font-size: 100px;
+      transform: translate(50%,50%);
+    }
+  }
+}
