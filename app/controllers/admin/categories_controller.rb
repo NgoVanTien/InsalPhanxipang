@@ -7,11 +7,10 @@ class Admin::CategoriesController < Admin::ApplicationController
 
   def destroy
     if @category.destroy
-      flash[:success] = "Chúc mừng bạn đả xóa thành công."
+      redirect_to admin_categories_path, :notice => ["xóa thành công", "success"]
     else
-      flash[:danger] = "Xin lỗi ! Bạn đã xóa không thành công, xin thử lại."
+      redirect_to admin_categories_path, :notice => ["xóa ko thành công", "error"]
     end
-    redirect_to admin_categories_path
   end
 
   private
