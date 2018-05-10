@@ -1,4 +1,4 @@
-//Create User
+# Create User
 user = User.create(
     name:"insal",
     password:"12345678",
@@ -8,13 +8,13 @@ user = User.create(
     personal_card: "CMND",
     role:"1")
 
-//Create category
+# Create category
 data_category = ["Ao dai", "Vest", "Ao phong"]
 data_category.each do |item|
     Category.create(name: item)
 end
 
-//Create bill
+# Create bill
 (1..20).to_a.each do |item|
     Bill.create(
         start_renting: "27/09/2018",
@@ -24,7 +24,7 @@ end
         user_id: 1)
  end
 
-//Create bill
+# Create bill
 bill = Bill.create(start_renting: "2016-10-05", end_renting: "", total: "1234", status: "0", user_id: user.id)
 r = Random.new
 arr = ["http://aocuoibangchau.vn/multidata/ao-cuoi-bang-chau-1.jpg",
