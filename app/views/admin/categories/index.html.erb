@@ -6,6 +6,27 @@
           <div class = "btn-group categories-controller">
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editCategory"><i class="fa fa-edit"></i></button>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteCategory"><i class="fa fa-trash"></i></button>
+            <div class="modal fade" id="deleteCategory" role="dialog">
+              <div class="modal-dialog">
+              <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Xác nhận</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Bạn có muốn xóa không?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <%= link_to admin_category_path(c),method: :delete,
+                    data: {} do %>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+                    <% end %>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="media">
             <div class="media-left">
