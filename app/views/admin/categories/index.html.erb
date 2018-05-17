@@ -4,13 +4,14 @@
       <div class="box box-solid">
         <div class="box-body" style= "height: 450px;">
           <div class = "btn-group categories-controller">
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editCategory"><i class="fa fa-edit"></i></button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editCategory<%=c.id%>"><i class="fa fa-edit"></i></button>
+              <%= render  "edit", c:c %>
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteCategory"><i class="fa fa-trash"></i></button>
           </div>
           <div class="media">
             <div class="media-left">
               <a href="#" class="ad-click-event">
-                <img src="https://taha.vn/images/thumbnails/380/475/detailed/11/Hollister-xanh-reu.jpg?t=1522224244" alt="Material Dashboard Pro" class="media-object">
+                <img src="<%= c.picture %>" alt="Material Dashboard Pro" class="media-object">
               </a>
             </div>
           </div>
@@ -24,7 +25,8 @@
     <div class="col-sm-12 col-md-4 add-category__btn" style= "height: 450px;">
       <div class="container">
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> </button>
+        <button type="button" class="btn btn-info btn-lg btn__add" data-toggle="modal" data-target="#newCategory"><i class="fa fa-plus"></i> </button>
+        <%= render  "new", category: @new_category %>
       </div>
     </div>
 </div>

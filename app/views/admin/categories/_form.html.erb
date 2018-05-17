@@ -1,0 +1,23 @@
+<div class = "row">
+              <div class = "col-md-3">
+                <div class = "row"><%= form.text_field :name, :placeholder => t("admin.categories.name"),
+                  style: "font-size: 20px;margin-bottom: 15px;height: 30px" %></div>
+                <div class = "row">
+                  <label for="exampleInputFile"><%=t "admin.categories.add_image"%></label>
+                  <%= form.file_field :picture, type:"file", onchange: "loadFile(event)"%>
+                </div>
+              </div>
+              <div class="preview col-md-3">
+                <img src = <%= (defined? c)? c.picture : "" %>  <%= "id="+ (defined? c)? "output" + c.id.to_s : "output" %> style = "height: 100px" />
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= form.submit t "admin.categories.save", type:"submit", class: "btn btn-default" %>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>

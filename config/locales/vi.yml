@@ -22,6 +22,12 @@ vi:
       renting_fee: "Phí thuê"
       btn_back: "Trở về"
       btn_save: "Lưu"
+    categories:
+      create_title: "Tạo một danh mục mới"
+      name: "Tên"
+      add_image: "Chọn ảnh"
+      save: "Lưu"
+      close: "Đóng"
     bills:
       id: "STT"
       bill: "Hóa đơn"

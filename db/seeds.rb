@@ -13,9 +13,16 @@ user = User.create(
   role:"1")
 
 #Create category
-data_category = ["Ao dai", "Vest", "Ao phong"]
+r = Random.new
+arr = ["http://aocuoibangchau.vn/multidata/ao-cuoi-bang-chau-1.jpg",
+  "http://toplist.vn/images/800px/anh-vien-ao-cuoi-valentine-155953.jpg",
+   "http://chupanhcuoigiare.net/wp-content/uploads/2017/12/khach-san-thang-loi.jpg",
+   "http://www.marry.vn/wp-content/uploads/users/452080/2016/08/19/album-anh-cuoi-dep-nhat-2016-h-6.jpg",
+   "http://www.marry.vn/wp-content/uploads/2017/09/15/r5.png"]
 data_category.each do |item|
-  Category.create(name: item)
+  Category.create(
+    name: item,
+    picture_file_name: arr[r.rand(0...4)])
 end
 
 #Create bill

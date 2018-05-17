@@ -23,6 +23,12 @@ en:
       renting_fee: "Renting fee"
       btn_back: "Back"
       btn_save: "Save"
+    categories:
+      create_title: "Create a new category"
+      name: "Name"
+      add_image: "Add image"
+      save: "Save"
+      close: "Close"
     bills:
       id: "ID"
       start_renting: "Start renting"
