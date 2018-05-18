@@ -29,8 +29,7 @@ en:
     insights: "Insights"
     products: "Products"
     action: "Action"
-    sign_up: "Sign up"
-    log_in: "Log in"
+    log_out: "Log Out"
   views:
     pagination:
       first: "« FIRST"

@@ -9,7 +9,7 @@
       <%= form_for(@product, url: admin_products_path , html: { id: "formGroup" }) do |p| %>
       <div class="modal-body body-add-product">
         <div class="form-group">
-          <div class="preview col-md-6"> 
+          <div class="preview col-md-6">
             <label for="exampleInputFile"><%= t "admin.products.add_picture" %></label>
               <div >
                 <%= p.file_field :image%>
@@ -34,7 +34,7 @@
                 <div class="col-sm-10">
                 <%= p.text_field :price, class: "input-text" %>
                 </div>
-              </div>  
+              </div>
               <div class="form-group row">
                 <label class="col-sm-2 col-form-label"><%= t "admin.products.renting_fee" %></label>
                 <div class="col-sm-10">

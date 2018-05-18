@@ -29,8 +29,7 @@ vi:
     insights: "Thống kê chi tiết"
     products: "Sản phẩm"
     action: "Tìm kiếm"
-    sign_up: "Đăng ký"
-    log_in: "Đăng nhập"
+    log_out: "Đăng xuất"
   views:
     pagination:
       first: "« Trang Đầu"

@@ -1,5 +1,5 @@
 class Admin::AdminsController < ApplicationController
-  before_action :login_success
+  before_action :login_success, except: :destroy
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
@@ -9,4 +9,9 @@ class Admin::AdminsController < ApplicationController
       redirect_to admin_root_path, :notice => ["Đăng nhập sai!", "error"]
     end
   end
+  def destroy
+    log_out
+    redirect_to admin_root_path, :notice => ["Đăng xuất thành công!", "success"]
+  end
+
 end
