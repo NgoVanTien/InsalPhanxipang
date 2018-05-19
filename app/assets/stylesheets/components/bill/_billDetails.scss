@@ -1,0 +1,55 @@
+.table-bill {
+  margin: 20px 20px 0;
+  max-width: 800px;
+}
+
+.table-bill>tbody>tr>td {
+  border: 1px solid black;
+}
+
+.table-bill>tbody>tr>th {
+  border: 1px solid black;
+}
+
+.remove-bill {
+  display: none;
+}
+
+.remove-bill:hover {
+  display: inline-block;
+  color: blue;
+}
+
+.btn-pay:hover {
+  background: red;
+}
+
+.date-picker {
+  border: none;
+}
+
+.fa.fa-edit {
+  color: red;
+  font-size: 40px;
+  float: right;
+}
+
+.footer-bill {
+  border-top: 1px solid transparent;
+}
+
+.info-bill {
+  margin-top: 40px;
+}
+
+.row-info {
+  margin-left: 20px;
+}
+
+.total-bill {
+  margin: 30px 10px 0 0;
+}
+
+input {
+  border: none;
+}

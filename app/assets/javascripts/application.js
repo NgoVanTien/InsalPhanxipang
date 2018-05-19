@@ -22,3 +22,6 @@
 //= require views/productsView.js
 //= require bootbox.min.js
 //= require select2
+//= require bootstrap-daterangepicker
+//= require bootstrap-datepicker
+//= require models/bills.js
