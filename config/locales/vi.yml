@@ -38,6 +38,7 @@ vi:
       btn_pay: "Trả"
       btn_cancel: "Thoát"
       total_money: "Thành tiền"
+      total_fee: "Tổng phí"
   layouts:
     categories: "Danh Mục"
     bills: "Hóa Đơn"

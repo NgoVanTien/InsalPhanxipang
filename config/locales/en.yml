@@ -38,6 +38,7 @@ en:
       btn_pay: "Pay"
       btn_cancel: "Cancel"
       total_money: "Total money"
+      total_fee: "Total fee"
   layouts:
     categories: "Categorisdgdfgdfes"
     bills: "Bills"

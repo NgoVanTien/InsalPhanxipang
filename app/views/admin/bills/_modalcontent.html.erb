@@ -1,0 +1,82 @@
+<% if (@bill != nil && @user != nil) %>
+<div class="modal-content">
+  <div class="modal-header">
+    <button class="btn-edit" onclick="enableEdit()">
+      <i class="fa fa-2x fa-edit icon-edit"></i>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="box-body no-padding info-bill">
+      <div class="row row-info">
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.name" %>:</strong>
+          <input class="show-data show-data-edit" type="text" value=<%= @user.name %> disabled="disabled"/>
+        </div>
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.start_renting" %>:</strong>
+          <input class='date-picker' type="text" data-provide='datepicker' value= <%= @bill.start_renting %> disabled="disabled"/>
+        </div>
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.phone_number" %>:</strong>
+          <input class="show-data" type="text" value=<%= @user.phone %> disabled="disabled"/>
+        </div>
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.end_renting" %>:</strong>
+          <input class='date-picker' type="text" data-provide='datepicker' value=<%= @bill.end_renting %> disabled="disabled"/>
+        </div>
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.personal_card" %>:</strong>
+          <input class="show-data" type="text" value=<%= @user.personal_card %> disabled="disabled"/>
+        </div>
+        <div class="col-xs-6">
+          <strong><%= t "admin.bills.extend_renting" %>:</strong>
+          <input class="show-data" type="text" value="none" disabled="disabled"/>
+        </div>
+      </div>
+    </div>
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-bill table-hover">
+        <thead class="scrollhead">
+        <tr class="row">
+          <th class="col-md-2"><%= t "admin.bills.id" %></th>
+          <th class="col-md-2"><%= t "admin.products.product_name" %></th>
+          <th class="col-md-2"><%= t "admin.bills.quantity" %></th>
+          <th class="col-md-2"><%= t "admin.products.price" %></th>
+          <th class="col-md-2"><%= t "admin.bills.total" %></th>
+          <th class="col-md-2"><%= t "admin.bills.remove" %></th>
+        </tr>
+        </thead>
+        <tbody class="scrollbody">
+        <% @products_id.each_with_index do |item, index| %>
+        <tr class="row">
+          <td class="col-md-2"><%= index + 1 %></td>
+          <td class="col-md-2"><%= @products_name[index] %></td>
+          <td class="col-md-2"><%= @products_number[item] %></td>
+          <td class="col-md-2"><%= @products_price[index] %></td>
+          <td class="col-md-2"><%= @products_number[item].to_f*@products_price[index].to_f %></td>
+          <td class="col-md-2">
+            <a href="#" class="remove-bill"><%= t "admin.bills.remove" %></a>
+          </td>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="row total-bill">
+      <div class="col-xs-4">
+        <strong><%= t "admin.bills.total_money" %>: <%= @bill.total %></strong>
+      </div>
+      <div class="col-xs-4">
+        <strong><%= t "admin.bills.extend" %>:</strong><br>
+      </div>
+      <div class="col-xs-4">
+        <strong><%= t "admin.bills.total_fee" %>: <%= @bill.total %></strong>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer footer-bill">
+    <button type="button" class="btn btn-danger" data-dismiss="modal"><%= t "admin.bills.btn_pay" %></button>
+    <button type="button" class="btn btn-danger btn-cancel" onclick="disableEdit()" data-dismiss="modal"><%= t "admin.bills.btn_cancel" %></button>
+  </div>
+</div>
+<% end %>

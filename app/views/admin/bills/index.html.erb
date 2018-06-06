@@ -28,7 +28,8 @@
             <td><%= bill.start_renting %></td>
             <td><%= bill.total %></td>
             <td><span class="label label-success"><%= bill.status %></span></td>
-            <td><button type="button" class="btn btn-default" id-bt = <%= bill.id %> data-toggle="modal" data-target="#modal-default"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+            <!-- <td><button type="button" class="btn btn-default" id-bt = <%= bill.id %> data-toggle="modal" data-target="#modal-default"><i class="fa fa-eye" aria-hidden="true"></i></button></td> -->
+            <td><%= link_to "", admin_bill_path(bill), remote: true, :method => :get, :class => "btn btn-default fa fa-eye","data-toggle" => "modal", "data-target" => "#modal-default" %></td>
           </tr>
           <% end %>
         </table>
@@ -43,5 +44,5 @@
   </div>
 </div>
  <tbody id="bills">
-  <%= render "show" %>
+  <%= render "modal" %>
 </tbody>

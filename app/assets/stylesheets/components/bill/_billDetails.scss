@@ -1,19 +1,20 @@
 .table-bill {
   margin: 20px 20px 0;
   max-width: 800px;
-}
-
-.table-bill>tbody>tr>td {
   border: 1px solid black;
 }
 
-.table-bill>tbody>tr>th {
+.table-bill > tbody > tr > td {
   border: 1px solid black;
+  text-align: center;
 }
 
-.remove-bill {
-  display: none;
+.table-bill > thead > tr > th {
+  border: 1px solid black;
+  text-align: center;
 }
+
+.remove-bill {}
 
 .remove-bill:hover {
   display: inline-block;
@@ -30,17 +31,13 @@
 
 .icon-edit {
   color: red;
-  font-size: 40px;
-  float: right;
 }
 
 .footer-bill {
   border-top: 1px solid transparent;
 }
 
-.info-bill {
-  margin-top: 40px;
-}
+.info-bill {}
 
 .row-info {
   margin-left: 20px;
@@ -52,4 +49,23 @@
 
 input {
   border: none;
+  background: none;
+}
+
+.btn-edit {
+  background: none;
+  border: none;
+  float: right;
+}
+
+.scrollbody {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.scrollhead {
+  display: block;
+  margin-right: 12px;
 }
