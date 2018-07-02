@@ -16,10 +16,10 @@
 //= require bootstrap-sprockets
 //= require jquery-ui
 //= require rails-ujs
+//= require bootbox.min.js
 //= require vendor/adminlte.min
 //= require views/loginView.js
 //= require notify.js
-//= require bootbox.min.js
 //= require select2
 //= require bootstrap-daterangepicker
 //= require bootstrap-datepicker

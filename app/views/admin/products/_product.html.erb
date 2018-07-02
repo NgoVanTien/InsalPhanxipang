@@ -6,30 +6,32 @@
       <a href="#" class="link">
         <div class="image" style="background-image: url(<%= item.image %>);">
           <span class="title">
-              <p class= "text text-price" id-name="<%= item.id %>"><%= item.price %></p>
-              <p class= "text" id-name="<%= item.id %>"><%= item.name %></p>
+            <p class="text text-price"><%= item.price %></p>
+            <p class="text" id-name="<%= item.id %>"><%= item.name %></p>
           </span>
         </div>
         <div class="btn-group">
-          <button class="btn btn-default delete bt-delete" id-button="<%= item.id %>"><i class="fa fa-trash"></i></button>
-          <%= link_to  edit_admin_product_path(item), class: "btn btn-default edit", remote: true do %>
-            <i class="fa fa-edit "></i>
-          <%end%>
-        </div>
-      </a>
-    </div>
-    <% if ((index + 1) % 5 == 0 || index == (products.size - 1)) %>
-    </div>
-  <% end %>
+          <button class="btn btn-default delete bt-delete" idbutton="<%= item.id %>">
+            <i class="fa fa-trash"></i>
+          </button>
+          <%= link_to edit_admin_product_path(item), class: "btn btn-default edit", remote: true do %>
+          <i class="fa fa-edit "></i>
+        <%end%>
+      </div>
+    </a>
+  </div>
+  <% if ((index + 1) % 5 == 0 || index == (products.size - 1)) %>
+  </div>
+<% end %>
 <% end %>
 <div class="row paginate">
-  <%= paginate products, theme: "twitter-bootstrap-4" %>
+<%= paginate products, theme: "twitter-bootstrap-4" %>
 </div>
 <script type="text/javascript">
-  $(function () {
-    var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
-    var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
-    $.notify(notice, type);
-    <% flash[:notice] = "" %>
-  })
+$(function () {
+  var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
+  var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
+  $.notify(notice, type);
+  <% flash[:notice] = "" %>
+})
 </script>

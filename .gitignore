@@ -21,3 +21,7 @@
 # New edit
 config/database.yml
 public/
+!public/coorporate
+.env
+coverage/
+.rspec

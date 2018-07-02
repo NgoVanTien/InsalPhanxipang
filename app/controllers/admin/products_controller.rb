@@ -6,9 +6,9 @@ class Admin::ProductsController < Admin::ApplicationController
 		@products = Product.all
 		@categories = Category.all
 		if params[:category_id] != nil
-			@products = Product.find_by_products(params[:category_id]).order(id: :desc).page(params[:page]).per(12)
+			@products = Product.where(status: :active).find_by_products(params[:category_id]).order(id: :desc).page(params[:page]).per(12)
 		else
-			@products = Product.find_by_products(1).page(params[:page]).order(id: :desc).per(12)
+			@products = Product.where(status: :active).find_by_products(1).page(params[:page]).order(id: :desc).per(12)
     end
   end
 
@@ -48,12 +48,12 @@ class Admin::ProductsController < Admin::ApplicationController
   end
 
   def destroy
-    if @products.destroy
+    if (Product.update(params[:id],:status => "remove"))
 			flash[:notice] = [t("admin.products.notice_delete"), "success"]
 			if params[:category_id] != nil
-        @products = Product.find_by_products(params[:category_id]).page(params[:page]).per(12)
+        @products = Product.where(status: :active).find_by_products(params[:category_id]).order(id: :desc).page(params[:page]).per(12)
 			else
-        @products = Product.find_by_products(1).page(params[:page]).per(12)
+        @products = Product.where(status: :active).find_by_products(1).order(id: :desc).page(params[:page]).per(12)
 			end
 			params[:id] = ""
     end

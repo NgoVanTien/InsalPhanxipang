@@ -2,10 +2,10 @@
   <div class="col-md-3 col-sm-6 col-xs-12" id="category_<%= category.id %>">
     <div class="box-category">
       <div class="category-content">
-        <a href="#" class="ad-click-event">
+          <%= link_to admin_products_path(:category_id => category.id) do %>
           <img  class="image-category" src="<%= category.image %>" alt="Material Dashboard Pro">
           <span class="name-category"><%= category.name %></span>
-        </a>
+          <%end%>
         <div class = "btn-group btn-categories-controller">
           <%= link_to edit_admin_category_path(category), remote: true, :class => 'btn btn-default' do %>
           <i class="fa fa-edit"></i>

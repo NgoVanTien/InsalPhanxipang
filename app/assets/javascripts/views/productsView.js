@@ -10,15 +10,14 @@ $("#category").on("change", function() {
     },
   });
 })
-
 $("#product").on("click", ".bt-delete", function() {
-  var product_id = $(this).attr("id-button");
+  var product_id = $(this).attr("idbutton");
   var url = "/admin/products/" + product_id;
   var nameproduct = $("[id-name =" + product_id + "]").text();
   var category_id = $("#category option:selected").val();
   var a = bootbox.confirm({
     title: "Xác nhận xóa",
-    message: "Bạn có muốn xóa sản phẩm" + nameproduct + "này không?",
+    message: "Bạn có muốn xóa sản phẩm " + nameproduct + " này không?",
     buttons: {
       cancel: {
         label: '<i class="fa fa-times"></i> không'
@@ -36,7 +35,6 @@ $("#product").on("click", ".bt-delete", function() {
           data: {
             "product_id": product_id,
             "category_id": category_id
-
           },
         });
       }

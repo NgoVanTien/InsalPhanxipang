@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180528093126) do
+ActiveRecord::Schema.define(version: 20180628114657) do
 
   create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date "start_renting"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20180528093126) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.integer "status", default: 1
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 

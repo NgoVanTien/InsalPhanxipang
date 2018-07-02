@@ -1,6 +1,6 @@
 $('.load-form').html('<%= j render("form") %>');
 $('#modal-default').modal("show");
-$("#new_product").validate({
+$(".new_product").validate({
   errorPlacement: function(error, element) {
     error.insertAfter(element);
   },

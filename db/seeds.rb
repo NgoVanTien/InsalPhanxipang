@@ -25,15 +25,24 @@ Bill.create(
   user_id: 1)
  end
 
-(1..30).to_a.each do |item|
+(1..100).to_a.each do |item|
     Product.create(
         name: "hihi#{item}",
         price: item,
         renting_fee: "15.000",
         # image:"ccccc",
-        category_id: 1)
+        category_id: r.rand(1...3),
+        status: 0, )
   end
-r = Random.new
+(101..200).to_a.each do |item|
+    Product.create(
+        name: "hihi#{item}",
+        price: item,
+        renting_fee: "15.000",
+        # image:"ccccc",
+        category_id: r.rand(1...3),
+        status: 1, )
+  end
 
 size = Size.create(
   name:"XL"
