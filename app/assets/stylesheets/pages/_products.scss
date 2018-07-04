@@ -1,3 +1,9 @@
+.add-image {
+  width:40%;
+}
+.add-item {
+  width:60%;
+}
 .btn-add-product {
   float: right;
   border: none;
@@ -6,30 +12,47 @@
 .modal-add-product {
   width: 100%;
   .body-add-product {
-    height: 350px;
+    height: 530px;
     background: white;
     .btn-back {
       border: 1px solid gray;
       margin-right: 40px;
     }
     .input-text {
-      float: right;
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #2A88BC;
       border:1px solid #2A88BC;
+      width: 100%;
+    }
+    .text-color {
+      width: 50px;
+    }
+    .text-amount {
+      width: 25px;
     }
     .btn-save {
       float: left;
       width: 65px;
     }
+    .label-color {
+      padding-left: 18px;
+    }
+    .label-color-xl {
+        padding-left: 12px;
+    }
+    .btn-add-size {
+      margin-left: 30px;
+    }
     .select-category {
       height: 30px;
-      margin-left: 34px;
-      width: 175px;
+      width: 100%;
       background: #fff;
       color: #2A88BC;
       border:1px solid #2A88BC;
     }
+    .checkbox-teal [type="checkbox"]:checked+label:before {
+       border-color: transparent #009688 #009688 transparent;
+     }
   }
 }
