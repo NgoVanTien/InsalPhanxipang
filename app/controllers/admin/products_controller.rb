@@ -13,16 +13,17 @@ class Admin::ProductsController < Admin::ApplicationController
   end
 
 	def new
-		binding.pry
 		@product = Product.new
-		@product_size = @product.product_sizes.build
+		4.times do
+      @product.product_sizes.build
+    end
   end
 
 	def create
-		@product_size = @product.product_sizes.create(product_params)
+		@product = Product.new product_params
 		respond_to do |format|
 
-      if @product = Product.create(product_params)
+      if @product.save
         format.js
       else
         format.json { render json: @product.errors.full_messages,
@@ -68,7 +69,8 @@ class Admin::ProductsController < Admin::ApplicationController
 			@product = Product.find_by id: params[:id]
 		end
     def product_params
-      params.require(:product).permit(:image, :name, :price, :renting_fee, :category_id, product_sizes_attributes: [:product_id, :size_id, :color, :quantity, :note])
+      params.require(:product).permit(:image, :name, :price, :renting_fee, :category_id,
+				product_sizes_attributes: [:product_id, :size_id, :color, :quantity, :note])
     end
 		def load_categories
 			@categories = Category.all

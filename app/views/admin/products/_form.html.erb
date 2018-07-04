@@ -34,7 +34,7 @@
           </div>
         </div>
         <%= p.fields_for :product_sizes do |product_size| %>
-          <%= render "product_size", p: product_size %>
+          <%= render "product_size", product_size: product_size %>
         <%end%>
         <div class="form-group">
           <button type="button" class="btn-back btn btn-default pull-left" data-dismiss="modal"><%= t "admin.products.btn_back" %></button>
