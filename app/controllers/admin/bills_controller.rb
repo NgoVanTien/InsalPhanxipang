@@ -5,6 +5,12 @@ class Admin::BillsController < Admin::ApplicationController
     @bills = Bill.all.page(params[:page]).per(10)
     @bill = Bill.new
     @bill = User.new
+
+    Bill.all.each do |bill|
+      if Bill.get_bill_duration(bill.end_renting) < 0 and  (bill.status = 0)
+        bill.update(status: 2)
+      end
+    end
   end
 
   def show
