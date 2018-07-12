@@ -1,13 +1,13 @@
 <%= form_for([:admin, @product], remote: true, :html => { :role => "form" })  do |p| %>
 <div class="modal-body body-add-product">
   <div class="form-group">
-    <div class="preview col-md-6">
+    <div class="preview col-md-3 add-image">
       <label for="exampleInputFile"><%= t "admin.products.add_picture" %></label>
       <div >
         <%= p.file_field :image%>
       </div>
     </div>
-    <div class="preview col-md-6">
+    <div class="preview col-md-9 add-item">
       <form class="add-form">
         <div class="form-group row">
           <label class="col-sm-2 col-form-label "><%= t "admin.products.category_name" %></label>
@@ -33,6 +33,9 @@
             <%= p.text_field :renting_fee, class: "input-text" %>
           </div>
         </div>
+        <%= p.fields_for :product_sizes do |product_size| %>
+          <%= render "product_size", product_size: product_size %>
+        <%end%>
         <div class="form-group">
           <button type="button" class="btn-back btn btn-default pull-left" data-dismiss="modal"><%= t "admin.products.btn_back" %></button>
           <%= p.submit t("admin.products.btn_save"), class:" btn btn-primary btn-save" %>
@@ -42,10 +45,3 @@
   </div>
 </div>
 <%end%>
-<script type="text/javascript">
-$(function () {
-  var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
-  var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
-  $.notify(notice, type);
-})
-</script>

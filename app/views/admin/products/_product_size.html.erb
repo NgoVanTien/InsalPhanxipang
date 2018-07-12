@@ -1,0 +1,13 @@
+<div>
+  <div class="form-group row">
+    <%= product_size.label :Size, class: "col-sm-2 col-form-label" %>
+    <div class="text col-sm-10">
+      <%= product_size.select :size_id, @sizes.collect {|u| [u.name, u.id]},
+        {}, {class: "select-size"} %>
+      <label class=" col-form-label label-color"><%= t "admin.products.color" %></label>
+      <%= product_size.text_field :color, class: "input-text text-color" %>
+      <label class=" col-form-label "><%= t "admin.products.amount" %></label>
+      <%= product_size.text_field :quantity, class: "input-text text-amount" %>
+    </div>
+  </div>
+</div>

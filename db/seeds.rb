@@ -8,13 +8,13 @@ user = User.create(
   personal_card: "CMND",
   role:"1")
 
-#Create category
-data_category = ["Ao dai", "Vest", "Ao phong"]
-data_category.each do |item|
-  Category.create(name: item)
+#Create Size
+name_size = ["S", "M", "L", "XL"]
+name_size.each do |item|
+  Size.create(name: item)
 end
 
-#Create bill
+#Create Bill
 r = Random.new
 (1..50).to_a.each do |item|
 Bill.create(
@@ -23,30 +23,9 @@ Bill.create(
   total: r.rand(1..30000),
   status:"hết hạn",
   user_id: 1)
- end
+end
 
-(1..100).to_a.each do |item|
-    Product.create(
-        name: "hihi#{item}",
-        price: item,
-        renting_fee: "15.000",
-        # image:"ccccc",
-        category_id: r.rand(1...3),
-        status: 0, )
-  end
-(101..200).to_a.each do |item|
-    Product.create(
-        name: "hihi#{item}",
-        price: item,
-        renting_fee: "15.000",
-        # image:"ccccc",
-        category_id: r.rand(1...3),
-        status: 1, )
-  end
-
-size = Size.create(
-  name:"XL"
-)
+#Create Product_size
 ProductSize.create(
   color: "red",
   quantity: 3,
@@ -54,6 +33,8 @@ ProductSize.create(
   product_id: 1,
   size_id: 1
 )
+
+#Creat Product_bill
 (1..200).to_a.each do |item|
 ProductBill.create(
   renting_quantity: 2,
@@ -63,4 +44,4 @@ ProductBill.create(
   bill_id: r.rand(1...20),
   size_id: 1,
 )
- end
+end
