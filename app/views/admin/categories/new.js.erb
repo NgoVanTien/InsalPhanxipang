@@ -6,3 +6,21 @@ $('#modal h4').html('<i class="glyphicon glyphicon-plus"></i><%= t "admin.catego
 
 // Render the new form
 $('.modal-body').html('<%= j render("form") %>');
+
+//Validation for method new
+$("#new_category").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+              },
+        image: "required",
+    },
+    messages: {
+      name: {
+        required: "Vui lòng nhập tên Danh mục",
+        minlength: "Ngắn quá!!"
+              },
+        image: "Vui lòng chọn ảnh",
+    }
+  });

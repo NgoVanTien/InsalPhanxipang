@@ -6,3 +6,20 @@ $('.modal-body').html('<%= j render("form") %>');
 
 // Show the dynamic dialog
 $('#modal').modal("show");
+  $(".edit_category").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+              },
+      image: {
+        required: false,
+              }
+    },
+    messages: {
+      name: {
+        required: "Vui lòng nhập tên Danh mục",
+        minlength: "Ngắn quá!!"
+              },
+    }
+  });

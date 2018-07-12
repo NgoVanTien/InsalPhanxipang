@@ -3,18 +3,18 @@
     <div class = "row">
       <div class = "col-md-3">
         <div class = "row"><%= form.text_field :name, :placeholder => t("admin.categories.name"),
-          class:"category__name_field" %></div>
+          class:"category__name_field", name: "name" %></div>
         <div class = "row">
           <label for="exampleInputFile"><%=t "admin.categories.add_image"%></label>
-          <%= form.file_field :image, type:"file", onchange: "loadFile(event)"%>
+          <%= form.file_field :image, type:"file", onchange: "loadFile(event)", name: "image"%>
         </div>
       </div>
       <div class="preview col-md-3">
-        <img id = "output"/>
+        <img id = "output" src = <%= @category.image%> />
       </div>
     </div>
     <div class="modal-footer btn-group-category">
-      <%= form.submit @category.new_record? ? "Create " : "Update", type:"submit", class: "btn btn-primary btn-category" %>
+      <%= form.submit t("admin.categories.save"), type:"submit", class: "btn btn-primary btn-category" %>
       <button type="button" class="btn btn-default btn-category" data-dismiss="modal"><%=t "admin.categories.close"%></button>
     </div>
 <% end %>
@@ -28,5 +28,6 @@
     var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : ''%>"
     var type = "<%= !flash[:notice].nil? ? flash[:notice].last : ''%>"
     $.notify(notice, type);
-  })
+  });
+
 </script>
