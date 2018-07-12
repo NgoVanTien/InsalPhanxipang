@@ -80,6 +80,6 @@ vi:
         display_entries:
           zero: "không có %{entry_name}"
           one: "hiển thị <b>1</b> %{entry_name}"
-          other: "hiển thị <b>atất cả %{count}</b> %{entry_name}"
+          other: "hiển thị <b>tất cả %{count}</b> %{entry_name}"
       more_pages:
         display_entries: " hiển thị %{entry_name} từ <b>%{first} - %{last}</b> của <b>%{total}</b> %{entry_name}"

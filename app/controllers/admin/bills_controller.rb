@@ -1,10 +1,17 @@
 class Admin::BillsController < Admin::ApplicationController
   def index
     @q = Bill.ransack(params[:q])
-    @bills = @q.result.includes(:user).page(params[:page]).per(10)
-    @bills = Bill.all.page(params[:page]).per(10)
-    @bill = Bill.new
-    @bill = User.new
+    if @q
+      @bills = @q.result.includes(:user).page(params[:page]).per(10)
+    else
+      @bills = Bill.all.page(params[:page]).per(10)
+      @bill = Bill.new
+      @bill = User.new
+    end
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def show
