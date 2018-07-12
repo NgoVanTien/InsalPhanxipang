@@ -18,8 +18,8 @@ end
 r = Random.new
 (1..50).to_a.each do |item|
 Bill.create(
-  start_renting: "27/09/2018",
-  end_renting: "22/11/2018",
+  start_renting: "27/06/2018",
+  end_renting: "22/7/2018",
   total: r.rand(1..30000),
   status:"hết hạn",
   user_id: 1)
